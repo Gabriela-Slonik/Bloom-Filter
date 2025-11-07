@@ -1,4 +1,5 @@
-* {
+
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +15,7 @@ body {
 /* ======== CABEÇALHO ======== */
 header {
   background-color: #5175c4; 
-    background-image: url(''); 
+    background-image: url('https://i.pinimg.com/1200x/83/07/0a/83070ae77aa27592dba6eb3b979221fb.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -298,6 +299,8 @@ footer {
   min-height: 250px;
 }
 
+/*CONTEXTO E EXPLICAÇÂO*/
+
 
 /*COMPLEXIDADE TEMPO*/
 .janela {
@@ -401,7 +404,7 @@ footer {
 }
 
 .comparacao h2 {
-  color: linear-gradient(135deg, #2f1852, #4e32a8);;
+  color: #00750a;
   font-family: "Josefin Sans", sans-serif;
   margin-bottom: 20px;
   font-size: 2rem;
@@ -418,7 +421,7 @@ footer {
 
 .comparacao-card {
   width: 300px;
-  min-height: 350px; /* mais alta */
+  min-height: 350px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -446,56 +449,126 @@ footer {
 }
 
 /*QUADROS PARA TEXTO*/
-.gallery {
-  background-color: #f3f5ff;
-  padding: 60px 10%;
-  text-align: center;
+
+
+.winbox {
+  width: 320px;
+  max-width: 1000px;
+  background-color: #d6fffa;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), inset 0 0 0 2px #d0e3f8;
+  border: 2px solid #a9c9ef;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease;
 }
 
 .gallery h2 {
-  color: #02a3e8;
+  color: #00750a;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 2rem;
   margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .texts {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: flex-start;   
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.text-box {
-  width: 340px;
-  min-height: 200px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  transition: transform 0.3s;
+.winbox:hover {
+  transform: scale(1.04);
+}
+
+.winbar {
+  background: linear-gradient(to bottom, #e5f0fb, #b8d5f2);
+  height: 28px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;             
+  gap: 30px;   
+  justify-content: space-between;
+  border-bottom: 1px solid #93b8e0;
+  padding: 0 8px;
+}
+
+/* Abas */
+.win-tabs {
+  display: flex;
+  flex-wrap: wrap;             
+  gap: 30px; 
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.win-tab {
+  background: #dfeaf8;
+  padding: 2px 8px;
+  border-radius: 4px 4px 0 0;
+  color: #333;
+  font-size: 0.8rem;
+  border: 1px solid #aec8e5;
+}
+
+.win-tab.win-active {
+  background: #ffffff;
+  border-bottom: none;
+}
+
+/* Botões */
+.win-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.win-buttons button {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.win-min,
+.win-max {
+  background-color: #e0e6f5;
+}
+
+.win-close {
+  background-color: #e74c3c;
+}
+
+/* Área de conteúdo */
+.win-content {
+  padding: 18px;
+  background: #ffffff;
+  color: #222;
+  min-height: 150px;
   text-align: left;
 }
 
-.text-box:hover {
-  transform: scale(1.05);
-}
-
-.text-box h3 {
+.win-content h3 {
   color: #2c3adf;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
-.text-box p {
+.win-content p {
   color: #333;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
+
 
 /*CALCULADORA*/
 /* ===== Seção principal ===== */
 #simulacao {
   background: linear-gradient(135deg, #c9fffe, #1e7bbd, #4e32a8);
+  border-radius: 30px;
   padding: 80px 0;
   display: flex;
   justify-content: center;

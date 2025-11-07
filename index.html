@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/textStyles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
@@ -42,7 +42,10 @@
 
     <section id="contextoHistorico">
       <h2>Contexto histórico</h2>
-
+           <p>Esta estrutura de dados foi concebida por Burton Howard Bloom em 1970 que demanda pouco espaço. Ela é utilizada para testar se um elemento está presente em um conjunto sem necessitar consultar a lista completa de elementos presente nesse conjunto.</p>
+            <p>O trabalho de Pagh, em 2005 propõe uma estrutura de dados de Bloom Filter teoricamente quase ótima em espaço, usando hashing perfeito para lidar com conjuntos de chaves estáticos. Essa estrutura, porém, não era prática por duas razões.</p>
+            <p>Primeiro, na época, só existiam algoritmos teóricos de hashing perfeito quase ótimo em espaço. Esse problema foi resolvido com novos desenvolvimentos em funções de hash perfeitas, que requerem aproximadamente 2,6 bits por chave armazenada e podem ser avaliadas em tempo O(1).</p>
+            <p>Segundo, não era possível representar uma função hash totalmente aleatória sem desperdiçar O(n log n) bits. Esse problema foi resolvido pela técnica split-and-share, proposta em 2007 por Dietzfelbinger e Weidling, tornando possível usar O(n) bits para representar uma função hash totalmente aleatória.</p>
     </section>
 
     <section id="explicacaoTecnica">
@@ -91,36 +94,34 @@
         </ul>
       </article>
     </section>
-    <section>
-      <h2>Aplicações</h2>
-      <article id="redesP2P">
-        <h3>Redes P2P/ Overlay</h3>
-        <ul>
-          <li>Redes P2P de tamanho moderado;</li>
+
+   <section class="gallery">
+  <h2>Aplicações</h2>
+  <div class="texts">
+    <div class="text-box">
+      <h3>Redes P2P/ Overlay</h3>
+      <p><li>Redes P2P de tamanho moderado;</li>
           <li>Reconciliação aproximada de conjuntos para entrega de conteúdo;</li>
           <li>Interseção de conjuntos para buscas por palavra-chave.</li>
-        </ul>
-      </article>
-      <article id="recursos">
-        <h3>Roteamento</h3>
-        <ul>
-          <li>Um protocolo básico de roteamento</li>
+</p>
+    </div>
+    <div class="text-box">
+      <h3>Roteamento</h3>
+      <p><li>Um protocolo básico de roteamento</li>
           <li>Roteamento de recursos em redes P2P</li>
           <li>Roteamento geográfico</li>
-        </ul>
-      </article>
-      <article id="pacotes">
-        <h3>Roteamento de Pacotes</h3>
-        <ul>
-          <li>Detecção de loops no Icarus</li>
+</p>
+    </div>
+    <div class="text-box">
+      <h3>Roteamento de Pacotes</h3>
+      <p><li>Detecção de loops no Icarus</li>
           <li>Gerenciamento de filas: Stochastic Fair Blue</li>
-          <li>Multicast</li>
-        </ul>
-      </article>
-    </section>
-    </ul>
-    </article>
-    </section>
+          <li>Multicast</li></p>
+    </div>
+  </div>
+</section>
+
+
     <section id="simulacao">
 
     </section>

@@ -12,7 +12,6 @@
 
   <title>Bloom Filter</title>
 </head>
-
 <body>
   <header>
     <h1>Bloom Filter</h1>
@@ -62,11 +61,6 @@
 </div>
     </section>
 
-    
-    
-    
-    
-    
     <section id="contextoHistorico">
       <h2>Contexto histórico</h2>
            <p>Esta estrutura de dados foi concebida por Burton Howard Bloom em 1970 que demanda pouco espaço. Ela é utilizada para testar se um elemento está presente em um conjunto sem necessitar consultar a lista completa de elementos presente nesse conjunto.</p>
@@ -104,14 +98,13 @@
     <p>Em qualquer aplicação em que falsos positivos não causem problemas significativos, apenas uma aproximação de S pode ser armazenada em vez de guardar explicitamente o conjunto, fornecendo assim uma representação mais compacta que pode caber na memória. Se cada elemento que não pertence a S for um falso positivo com probabilidade de, no máximo, &#491;, então o número de bits necessários para armazenar a aproximação é aproximadamente n log₂ (1/&#491;), enquanto, para evitar falsos positivos, seria necessário armazenar S em pelo menos n log₂ n bits.</p>
       <p>Considere o conjunto S' &supseteq; S, que inclui os elementos armazenados, inclusive os falsos positivos. O conjunto S' é escolhido de forma que qualquer elemento que não pertença a S tenha probabilidade de, no máximo, &#491; de pertencer a S'. Um filtro de Bloom (Bloom, 1970) é uma estrutura de dados extremamente compacta e elegante para representar um conjunto S' adequado.</p>
     <div class="perfil-imagem">
-      <img src="" alt="COMPLEXIDADE DE TEMPO">
+      <img src="../images/grafico.FalsoPositivoVSTamanhoDoFiltro.png" alt="COMPLEXIDADE DE TEMPO">
     </div>
   </div>
 </div>
     </div>
   </div>
 </section>
-
     
 <section class="comparacao">
   <h2>Comparação com estruturas similares</h2>
@@ -141,88 +134,102 @@
   </div>
 </section>
 
-    
-    
-  <section class="gallery">
-  <h2>APLICAÇÕES</h2>
 
+   <section class="gallery">
+  <h2>APLICAÇÕES</h2>
   <div class="texts">
-    <div class="winbox">
-      <div class="winbar">
-        <div class="win-tabs">
-          <div class="win-tab win-active">P2P</div>
-        </div>
-        <div class="win-buttons">
-          <button class="win-min"></button>
-          <button class="win-max"></button>
-          <button class="win-close"></button>
-        </div>
-      </div>
-      <div class="win-content">
-        <h3>Redes P2P/ Overlay</h3>
-        <p><li>Redes P2P de tamanho moderado;</li>
+    <div class="text-box">
+      <h3>Redes P2P/ Overlay</h3>
+      <p><li>Redes P2P de tamanho moderado;</li>
           <li>Reconciliação aproximada de conjuntos para entrega de conteúdo;</li>
           <li>Interseção de conjuntos para buscas por palavra-chave.</li>
 </p>
-      </div>
     </div>
-
-    <div class="winbox">
-      <div class="winbar">
-        <div class="win-tabs">
-          <div class="win-tab win-active">Roteamento</div>
-        </div>
-        <div class="win-buttons">
-          <button class="win-min"></button>
-          <button class="win-max"></button>
-          <button class="win-close"></button>
-        </div>
-      </div>
-      <div class="win-content">
-        <h3>Roteamento</h3>
-        <p><li>Um protocolo básico de roteamento</li>
+    <div class="text-box">
+      <h3>Roteamento</h3>
+      <p><li>Um protocolo básico de roteamento</li>
           <li>Roteamento de recursos em redes P2P</li>
           <li>Roteamento geográfico</li>
 </p>
-      </div>
     </div>
-
-    <div class="winbox">
-      <div class="winbar">
-        <div class="win-tabs">
-          <div class="win-tab win-active">Pacotes</div>
-        </div>
-        <div class="win-buttons">
-          <button class="win-min"></button>
-          <button class="win-max"></button>
-          <button class="win-close"></button>
-        </div>
-      </div>
-      <div class="win-content">
-        <h3>Roteamento de Pacotes</h3>
-        <p><li>Detecção de loops no Icarus</li>
+    <div class="text-box">
+      <h3>Roteamento de Pacotes</h3>
+      <p><li>Detecção de loops no Icarus</li>
           <li>Gerenciamento de filas: Stochastic Fair Blue</li>
           <li>Multicast</li></p>
-      </div>
     </div>
   </div>
 </section>
 
     <section id="simulacao">
-<article id="calculadora">
-                <h2>Calculadora de parâmetros ótimos</h2>
-                <form id="calcForm" method="post">
-                    <!--hashNumber = k-->
-                    <label for="hashNumber">Valor da função hash: </label><input type="number" name="hashNumber" id="hashNumber">
-                    <!--bits = m-->
-                    <label for="bits">Quantidade de bits: </label><input type="number" name="bits" id="bits">
-                    <!--numberOfElements = n-->
-                    <label for="numberOfElements">Número de elementos</label><input type="number" name="numberOfElements" id="numberOfElements">
-                    <input type="submit" id="calculate">
-                </form>
-            </article>
-            </article>
+      <article id="calculadora">
+        <h2>Calculadora de parâmetros ótimos</h2>
+          <form id="calcForm" method="post">
+            <label for="hashNumber">Valor da função hash: </label><input type="number" name="hashNumber" id="hashNumber" min="1">
+            <label for="bits">Quantidade de bits: </label><input type="number" name="bits" id="bits" min="1">
+            <label for="numberOfElements">Número de elementos</label><input type="number" name="numberOfElements" id="numberOfElements" min="1">
+            <input type="submit" id="calculate">
+          </form>
+        </article>
+        </article>
     </section>
+    <div id="representacaoVisual">
+      <div id="headerVisual">
+        <form>
+          <input id="textInput" type="text" required placeholder="Insira um elemento">
+          <button id="insertButton">Inserir</button>
+          <button id="searchButton">Buscar</button>
+          <button id="resetButton">Limpar</button>
+        </form>
+      </div>
+      <div id="hashFunctions">
+        <p>Funções de hash que determinam os bits a serem preenchidos na tabela</p>
+        <label for="hash1">Função de hash 1: </label><output name="hash1" id="hash_1" class="hashVisual"></output>
+        <label for="hash2">Função de hash 2: </label><output name="hash2" id="hash_2" class="hashVisual"></output>
+        <label for="hash3">Função de hash 3: </label><output name="hash3" id="hash_3" class="hashVisual"></output>
+      </div>
+      <div id="hashTable">
+        <div class="tableElement" id="index0">0</div>
+        <div class="tableElement" id="index1">0</div>
+        <div class="tableElement" id="index2">0</div>
+        <div class="tableElement" id="index3">0</div>
+        <div class="tableElement" id="index4">0</div>
+        <div class="tableElement" id="index5">0</div>
+        <div class="tableElement" id="index6">0</div>
+        <div class="tableElement" id="index7">0</div>
+        <div class="tableElement" id="index8">0</div>
+        <div class="tableElement" id="index9">0</div>
+        <div class="tableElement" id="index10">0</div>
+        <div class="tableElement" id="index11">0</div>
+        <div class="tableElement" id="index12">0</div>
+        <div class="tableElement" id="index13">0</div>
+        <div class="tableElement" id="index14">0</div>
+        <div class="tableElement" id="index15">0</div>
+        <div class="tableElement" id="index16">0</div>
+        <div class="tableElement" id="index17">0</div>
+        <div class="tableElement" id="index18">0</div>
+        <div class="tableElement" id="index19">0</div>
+        <div class="tableElement" id="index20">0</div>
+        <div class="tableElement" id="index21">0</div>
+        <div class="tableElement" id="index22">0</div>
+        <div class="tableElement" id="index23">0</div>
+        <div class="tableElement" id="index24">0</div>
+        <div class="tableElement" id="index25">0</div>
+        <div class="tableElement" id="index26">0</div>
+        <div class="tableElement" id="index27">0</div>
+        <div class="tableElement" id="index28">0</div>
+        <div class="tableElement" id="index29">0</div>
+        <div class="tableElement" id="index30">0</div>
+        <div class="tableElement" id="index31">0</div>
+      </div>
+      <div id="visualInfo">
+        <div id="palavrasInseridas">
+          <h3>Palavras Inseridas</h3>
+          <div id="listaDePalavras"></div>
+        </div>
+        <div id="mensagem"></div>
+      </div>
+    </div>
     <section id="referenciasBibliograficas">
       <h3>Referências Bibliográficas</h3>
       <ul>
@@ -239,13 +246,8 @@
     <p>© 2025 - Estrutura de Dados</p>
   </footer>
 
-  <script>
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('flower').classList.add('open');
-      }, 1000);
-    });
-  </script>
-  <script src="../js/calculadoraDeParametrosOtimos.js"></script>
+<script src="script.js"></script>
+<script src="calculadoraDeParametrosOtimos.js"></script>
+<script src="visualizacaoBloomFilter.js"></script>
 </body>
 </html>

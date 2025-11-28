@@ -77,6 +77,7 @@
         <p>Dada a possibilidade de ocorrência de resultados falsos positivos, o Bloom filter é uma estrutura de dados especialmente adequada para cenários em que os métodos convencionais (não probabilísticos, livres de erros) para responder a testes de membresia demandem uma quantidade impraticável de espaço. Ademais, Bloom sugere o uso dessa estrutura para aplicações em que a grande maioria dos elementos testados não fazem parte do conjunto representado pela estrutura. De fato, o Bloom filter permite diminuir o consumo de espaço sem acrescer o tempo de rejeição(tempo médio dispendido por uma estrutura de dados para decidir que um dado elemento não pertence ao conjunto representado), o que ocorre com o custo de resultados falsos positivos e impossibilidade de remoção de elementos da estrutura.</p>
         <div id="grafico">
           <img src="imagem grafico 1.jpg" alt="Gráfico falsos positivos vs tamanho do filtro">
+           <li><a href="https://hur.st/bloomfilter/?n=1000000&p=0.01&m=32&k=" /a></li>
         </div>
       </article>
     </section>
@@ -98,7 +99,7 @@
     <p>Em qualquer aplicação em que falsos positivos não causem problemas significativos, apenas uma aproximação de S pode ser armazenada em vez de guardar explicitamente o conjunto, fornecendo assim uma representação mais compacta que pode caber na memória. Se cada elemento que não pertence a S for um falso positivo com probabilidade de, no máximo, &#491;, então o número de bits necessários para armazenar a aproximação é aproximadamente n log₂ (1/&#491;), enquanto, para evitar falsos positivos, seria necessário armazenar S em pelo menos n log₂ n bits.</p>
       <p>Considere o conjunto S' &supseteq; S, que inclui os elementos armazenados, inclusive os falsos positivos. O conjunto S' é escolhido de forma que qualquer elemento que não pertença a S tenha probabilidade de, no máximo, &#491; de pertencer a S'. Um filtro de Bloom (Bloom, 1970) é uma estrutura de dados extremamente compacta e elegante para representar um conjunto S' adequado.</p>
     <div class="perfil-imagem">
-      <img src="../images/grafico.FalsoPositivoVSTamanhoDoFiltro.png" alt="COMPLEXIDADE DE TEMPO">
+      <img src="                         " alt="COMPLEXIDADE DE TEMPO">
     </div>
   </div>
 </div>
